@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python func.py'
+                sh 'python fun.py'
             }
         }
     }
