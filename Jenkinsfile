@@ -1,9 +1,18 @@
 pipeline {
     agent any
+
+    tools {
+        // Specify the Python installation
+        nodejs 'python' // Assuming you have configured Python as a NodeJS tool installation in Jenkins
+    }
+
     stages {
-        stage('build') {
+        stage('Build and Test') {
             steps {
-                sh 'python fun.py'
+                // Run Python commands or scripts here
+                sh 'python --version'
+                sh 'pip --version'
+                // Execute your build and test steps
             }
         }
     }
